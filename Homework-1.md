@@ -14,3 +14,17 @@ temperature from EWR in 2013. The variables that are listed are origin,
 year, day, time, hour, temp, dewp, humid, wind_dir, wind_speed,
 wind_gust,precip, pressure, visib, and time_hour.With mean 39.5821229
 degrees.
+
+``` r
+ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) +
+  geom_point(alpha = 0.8) +
+  labs(
+    x = "Time (hours)",
+    y = "Temperature (°F)",
+    color = "Humidity",
+    title = "EWR temperature across early January 2013"
+  ) +
+  theme_minimal()
+```
+
+![](Homework-1_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->

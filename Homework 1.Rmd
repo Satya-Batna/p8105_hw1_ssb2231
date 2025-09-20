@@ -15,3 +15,14 @@ library(moderndive)
 data("early_january_weather")
 ```
 This data set has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. This data is the hourly temperature from EWR in 2013. The variables that are listed are origin, year, day, time, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust,precip, pressure, visib, and time_hour.With mean `r  mean(early_january_weather$temp, na.rm = TRUE)` degrees.
+```{r}
+ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) +
+  geom_point(alpha = 0.8) +
+  labs(
+    x = "Time (hours)",
+    y = "Temperature (°F)",
+    color = "Humidity",
+    title = "EWR temperature across early January 2013"
+  ) +
+  theme_minimal()
+```
