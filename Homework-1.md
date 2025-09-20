@@ -95,3 +95,22 @@ mean(pull(df,fact_vec))
     ## logical: returning NA
 
     ## [1] NA
+
+The character and factor vectors have errors show up for them but the
+random sample and logical vector do not give errors, but the logical
+vector seems to be false and I beleive the numbers are being binarized
+even though it is not binary.
+
+``` r
+as.numeric(pull(df, is_positive)) 
+as.numeric(pull(df, char_vec))    
+as.numeric(pull(df, fact_vec))     
+```
+
+The logical vector is given directly as 1/0 and are automatically made
+to be true or false values with 1 and 0s even though they might not make
+sense. The character vector is given as NA’s and the factor variables
+are given as their operationalzed numbers. You can interpret the
+character and factor variables.
+
+END OF HOMEWORK!!! This was a struggle frfr.
