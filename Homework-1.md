@@ -27,4 +27,10 @@ ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) +
   theme_minimal()
 ```
 
-![](Homework-1_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](Homework-1_files/figure-gfm/unnamed-chunk-2-1.png)<!-- --> This
+scatterplot shows us the increasing in temperature over time and for
+lower humidity we have higher temperatures.
+
+``` r
+ggsave ("scatter_plot.pdf", height = 4, width = 6)
+```
