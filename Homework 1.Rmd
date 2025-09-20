@@ -33,3 +33,26 @@ ggsave ("scatter_plot.pdf", height = 4, width = 6)
 
 ```
 
+#Problem 2
+
+set.seed(123)
+
+```{r}
+set.seed(123)
+
+df <- tibble(
+  norm_sample = rnorm(10),                         
+  is_positive = rnorm(10) > 0,                      
+  char_vec    = sample(letters, 10),                
+  fact_vec    = factor(sample(c("low", "med", "high"), 10, replace = TRUE))
+)
+
+df
+mean(pull(df,norm_sample))
+mean(pull(df,is_positive))
+mean(pull(df,char_vec))
+mean(pull(df,fact_vec))
+
+```
+
+
